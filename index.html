@@ -1,590 +1,600 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRE6SBQZ8P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PRE6SBQZ8P');
-</script>
-
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>GoAI Partners - Enterprise AI, Built to Work</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GoAI Partners | Stop Doing It Manually. Start Next Week.</title>
+<meta name="description" content="GoAI Partners AI-powered SaaS workflow automation for modern operators. Identify, map, and automate the processes slowing your team down." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 <style>
-  :root {
-    --bg: #050a0f;
-    --bg2: #0a1520;
-    --surface: #122030;
-    --surface2: #1a2d40;
-    --accent: #00e5a0;
-    --accent-dim: rgba(0,229,160,0.12);
-    --accent-border: rgba(0,229,160,0.25);
-    --text: #e8f0f8;
-    --text2: #7a9ab5;
-    --text3: #4a6a85;
-    --border: rgba(255,255,255,0.07);
-    --border2: rgba(255,255,255,0.12);
-    --mono: 'Space Mono', monospace;
-    --sans: 'DM Sans', sans-serif;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
-  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; background: rgba(5,10,15,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-  .nav-logo { font-family: var(--mono); font-size: 16px; font-weight: 700; color: var(--accent); letter-spacing: 0.04em; text-decoration: none; }
-  .nav-logo span { color: var(--text2); font-weight: 400; }
-  .nav-links { display: flex; gap: 32px; list-style: none; }
-  .nav-links a { color: var(--text2); text-decoration: none; font-size: 15px; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--text); }
-  .nav-cta { background: var(--accent); color: #050a0f; font-family: var(--mono); font-size: 13px; font-weight: 700; padding: 9px 22px; border-radius: 4px; text-decoration: none; letter-spacing: 0.05em; transition: opacity 0.2s; }
-  .nav-cta:hover { opacity: 0.85; }
-  section { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
-  .label { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-  .label::before { content: ''; display: inline-block; width: 16px; height: 1px; background: var(--accent); }
-  #hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding-top: 80px; padding-bottom: 80px; position: relative; overflow: hidden; }
-  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 60px 60px; opacity: 0.4; pointer-events: none; }
-  .hero-glow { position: absolute; top: -200px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,229,160,0.08) 0%, transparent 70%); pointer-events: none; }
-  .hero-tag { font-family: var(--mono); font-size: 12px; color: var(--accent); border: 1px solid var(--accent-border); background: var(--accent-dim); display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 2px; margin-bottom: 32px; letter-spacing: 0.08em; }
-  .hero-tag::before { content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-  h1 { font-size: clamp(44px, 6vw, 80px); font-weight: 300; line-height: 1.05; letter-spacing: -0.02em; color: var(--text); margin-bottom: 28px; max-width: 820px; }
-  h1 em { font-style: italic; color: var(--accent); font-weight: 300; }
-  .hero-sub { font-size: 20px; color: var(--text2); max-width: 540px; line-height: 1.65; margin-bottom: 48px; font-weight: 300; }
-  .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-  .btn-primary { background: var(--accent); color: #050a0f; font-family: var(--mono); font-size: 13px; font-weight: 700; padding: 15px 30px; border-radius: 4px; text-decoration: none; letter-spacing: 0.06em; transition: opacity 0.2s, transform 0.1s; display: inline-block; }
-  .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
-  .btn-ghost { color: var(--text2); font-family: var(--mono); font-size: 13px; padding: 15px 0; text-decoration: none; letter-spacing: 0.06em; border-bottom: 1px solid var(--text3); transition: color 0.2s, border-color 0.2s; }
-  .btn-ghost:hover { color: var(--text); border-color: var(--text2); }
-  .hero-stats { display: flex; gap: 48px; margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--border); }
-  .stat-num { font-family: var(--mono); font-size: 30px; font-weight: 700; color: var(--accent); }
-  .stat-label { font-size: 14px; color: var(--text3); margin-top: 4px; }
-  h2 { font-size: clamp(30px, 4vw, 48px); font-weight: 300; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 16px; }
-  h2 em { font-style: italic; color: var(--accent); }
-  .section-sub { font-size: 18px; color: var(--text2); max-width: 520px; font-weight: 300; margin-bottom: 64px; }
-  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
-  .step { background: var(--surface); padding: 40px 34px; position: relative; transition: background 0.2s; }
-  .step:hover { background: var(--surface2); }
-  .step-num { font-family: var(--mono); font-size: 12px; color: var(--text3); letter-spacing: 0.08em; margin-bottom: 20px; }
-  .step h3 { font-size: 19px; font-weight: 500; color: var(--text); margin-bottom: 12px; line-height: 1.3; }
-  .step p { font-size: 15px; color: var(--text2); line-height: 1.7; font-weight: 300; }
-  .step-accent-line { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: transparent; transition: background 0.2s; }
-  .step:hover .step-accent-line { background: var(--accent); }
-  #why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .feature-list { display: flex; flex-direction: column; }
-  .feature { padding: 26px 0; border-bottom: 1px solid var(--border); display: flex; gap: 20px; align-items: flex-start; }
-  .feature:first-child { border-top: 1px solid var(--border); }
-  .feature-icon { width: 34px; height: 34px; background: var(--accent-dim); border: 1px solid var(--accent-border); border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-  .feature-icon svg { width: 15px; height: 15px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-  .feature-text h4 { font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
-  .feature-text p { font-size: 14px; color: var(--text2); line-height: 1.65; font-weight: 300; }
-  .why-aside { position: sticky; top: 88px; }
-  .aside-card { background: var(--surface); border: 1px solid var(--border2); border-radius: 6px; padding: 36px; }
-  .aside-card .big-num { font-family: var(--mono); font-size: 54px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 8px; }
-  .aside-card .big-label { font-size: 15px; color: var(--text2); margin-bottom: 32px; }
-  .metric-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-  .metric-bar-wrap { flex: 1; height: 3px; background: var(--border2); border-radius: 2px; }
-  .metric-bar { height: 100%; background: var(--accent); border-radius: 2px; }
-  .metric-label { font-family: var(--mono); font-size: 12px; color: var(--text3); min-width: 90px; }
-  .metric-val { font-family: var(--mono); font-size: 13px; color: var(--text2); min-width: 36px; text-align: right; }
-  .agent-area { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
-  .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
-  .cap-card { background: var(--surface); padding: 36px 30px; transition: background 0.2s; }
-  .cap-card:hover { background: var(--surface2); }
-  .cap-icon { width: 40px; height: 40px; background: var(--accent-dim); border: 1px solid var(--accent-border); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-  .cap-icon svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-  .cap-card h4 { font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 10px; line-height: 1.3; }
-  .cap-card p { font-size: 14px; color: var(--text2); line-height: 1.65; font-weight: 300; }
-  .cap-tag { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
-  .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2px; margin-top: 48px; }
-  .case-card { background: var(--surface); padding: 40px 34px; transition: background 0.2s; }
-  .case-card:hover { background: var(--surface2); }
-  .case-industry { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
-  .case-result { font-family: var(--mono); font-size: 40px; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: 8px; }
-  .case-desc { font-size: 15px; color: var(--text2); font-weight: 300; margin-bottom: 20px; }
-  .case-quote { font-size: 14px; color: var(--text3); font-style: italic; border-left: 2px solid var(--accent-border); padding-left: 14px; line-height: 1.6; }
-  .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; margin-top: 48px; }
-  .insight-card { background: var(--surface); padding: 34px; transition: background 0.2s; }
-  .insight-card:hover { background: var(--surface2); }
-  .insight-tag { font-family: var(--mono); font-size: 11px; color: var(--text3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
-  .insight-title { font-size: 17px; font-weight: 500; color: var(--text); line-height: 1.4; margin-bottom: 12px; }
-  .insight-body { font-size: 14px; color: var(--text2); line-height: 1.65; font-weight: 300; }
-  .insight-date { font-family: var(--mono); font-size: 12px; color: var(--text3); margin-top: 20px; }
-  .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .contact-form { display: flex; flex-direction: column; gap: 16px; }
-  label { font-size: 13px; color: var(--text2); font-family: var(--mono); letter-spacing: 0.06em; display: block; margin-bottom: 6px; }
-  input, textarea, select { width: 100%; background: var(--surface); border: 1px solid var(--border2); border-radius: 4px; padding: 13px 16px; color: var(--text); font-family: var(--sans); font-size: 15px; outline: none; transition: border-color 0.2s; }
-  input:focus, textarea:focus, select:focus { border-color: var(--accent); }
-  input::placeholder, textarea::placeholder { color: var(--text3); }
-  textarea { resize: vertical; min-height: 120px; }
-  select { -webkit-appearance: none; }
-  select option { background: var(--surface); }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .btn-submit { background: var(--accent); color: #050a0f; font-family: var(--mono); font-size: 13px; font-weight: 700; padding: 15px 28px; border: none; border-radius: 4px; cursor: pointer; letter-spacing: 0.06em; transition: opacity 0.2s; width: 100%; margin-top: 8px; }
-  .btn-submit:hover { opacity: 0.85; }
-  .contact-info h3 { font-size: 26px; font-weight: 300; color: var(--text); margin-bottom: 16px; line-height: 1.3; }
-  .contact-info p { font-size: 16px; color: var(--text2); font-weight: 300; margin-bottom: 40px; line-height: 1.7; }
-  .contact-details { display: flex; flex-direction: column; gap: 16px; }
-  .contact-detail { display: flex; gap: 14px; align-items: flex-start; }
-  .contact-detail-icon { width: 34px; height: 34px; background: var(--accent-dim); border: 1px solid var(--accent-border); border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .contact-detail-icon svg { width: 15px; height: 15px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; }
-  .contact-detail-text { font-size: 14px; color: var(--text2); font-weight: 300; }
-  .contact-detail-text strong { color: var(--text); font-weight: 500; display: block; font-size: 15px; margin-bottom: 2px; }
-  footer { border-top: 1px solid var(--border); padding: 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
-  .footer-logo { font-family: var(--mono); font-size: 15px; color: var(--accent); letter-spacing: 0.04em; }
-  .footer-logo span { color: var(--text3); font-weight: 400; }
-  .footer-links { display: flex; gap: 28px; }
-  .footer-links a { font-size: 14px; color: var(--text3); text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--text2); }
-  .footer-copy { font-family: var(--mono); font-size: 12px; color: var(--text3); }
-  @media (max-width: 900px) {
-    nav { padding: 0 24px; }
-    .nav-links { display: none; }
-    section { padding: 64px 24px; }
-    #why-inner, .contact-inner { grid-template-columns: 1fr; gap: 48px; }
-    .steps { grid-template-columns: 1fr; }
-    .hero-stats { flex-wrap: wrap; gap: 24px; }
-    .form-row { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 24px; text-align: center; padding: 32px 24px; }
-    .why-aside { position: static; }
-  }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black:     #070809;
+  --deep:      #0C0E12;
+  --surface:   #111318;
+  --surface-2: #181C22;
+  --border:    rgba(255,255,255,0.07);
+  --border-2:  rgba(255,255,255,0.12);
+  --white:     #FFFFFF;
+  --off-white: #E8ECF2;
+  --dim:       #7B8394;
+  --dimmer:    #4A5060;
+  --teal:      #00E5C3;
+  --teal-glow: rgba(0,229,195,0.12);
+  --teal-dim:  rgba(0,229,195,0.6);
+  --display: 'Syne', sans-serif;
+  --body:    'Inter', sans-serif;
+  --nav-h:   68px;
+  --pad:     clamp(1.5rem, 5vw, 6rem);
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--off-white);
+  font-family: var(--body);
+  font-weight: 300;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--nav-h); z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pad);
+  background: rgba(7,8,9,0.88);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.nav-mark {
+  width: 30px; height: 30px; border-radius: 7px;
+  background: var(--teal);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 800; font-size: 0.8rem; color: #000;
+}
+.nav-name { font-family: var(--display); font-weight: 700; font-size: 0.95rem; color: var(--white); }
+.nav-name span { color: var(--teal); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--dim); text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #000; background: var(--teal); padding: 0.55rem 1.3rem;
+  text-decoration: none; border-radius: 6px; font-weight: 500;
+  transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* HERO */
+#hero {
+  min-height: 100vh;
+  padding: calc(var(--nav-h) + 6rem) var(--pad) 5rem;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.hero-glow {
+  position: absolute; top: 30%; left: 50%; transform: translateX(-50%);
+  width: 700px; height: 350px;
+  background: radial-gradient(ellipse, rgba(0,229,195,0.09) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-grid-bg {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; max-width: 820px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  border: 1px solid rgba(0,229,195,0.25); background: rgba(0,229,195,0.07);
+  color: var(--teal); font-size: 0.7rem; letter-spacing: 0.15em;
+  text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 100px;
+  margin-bottom: 2.5rem;
+}
+.badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--teal); }
+.hero-title {
+  font-family: var(--display); font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 800; line-height: 1.0; color: var(--white);
+  letter-spacing: -0.03em; margin-bottom: 2rem;
+}
+.hero-title .accent { color: var(--teal); }
+.hero-sub {
+  font-size: clamp(1rem, 1.4vw, 1.1rem); color: var(--dim);
+  max-width: 520px; line-height: 1.75; margin-bottom: 3rem;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary {
+  font-size: 0.85rem; font-weight: 500; color: #000;
+  background: var(--teal); padding: 0.85rem 2rem;
+  text-decoration: none; border-radius: 8px; transition: opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.85; }
+.btn-outline {
+  font-size: 0.85rem; font-weight: 400; color: var(--off-white);
+  border: 1px solid var(--border-2); padding: 0.85rem 2rem;
+  text-decoration: none; border-radius: 8px; transition: border-color 0.2s;
+}
+.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+
+/* FEATURES */
+#features {
+  padding: 7rem var(--pad);
+  border-top: 1px solid var(--border);
+}
+.features-header { margin-bottom: 4rem; }
+.eyebrow {
+  display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;
+}
+.eyebrow-line { width: 24px; height: 1px; background: var(--teal); }
+.eyebrow-text {
+  font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--teal); font-weight: 400;
+}
+.section-heading {
+  font-family: var(--display); font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.02em;
+}
+.section-heading em { font-style: normal; color: var(--teal); }
+
+.features-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+  margin-top: 3rem;
+}
+.feature-card {
+  background: var(--surface); padding: 2rem;
+  transition: background 0.2s;
+}
+.feature-card:hover { background: var(--surface-2); }
+.feature-icon {
+  width: 40px; height: 40px; border-radius: 8px;
+  background: rgba(0,229,195,0.08);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--teal);
+}
+.feature-name {
+  font-family: var(--display); font-size: 1rem; font-weight: 600;
+  color: var(--white); margin-bottom: 0.6rem; letter-spacing: -0.01em;
+}
+.feature-text { font-size: 0.85rem; color: var(--dim); line-height: 1.65; }
+
+/* HOW IT WORKS */
+#how {
+  padding: 7rem var(--pad);
+  border-top: 1px solid var(--border);
+  background: var(--deep);
+}
+.steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; margin-top: 4rem; position: relative;
+}
+.steps::before {
+  content: '';
+  position: absolute; top: 28px; left: 10%; right: 10%;
+  height: 1px; background: var(--border-2);
+}
+.step { padding: 0 1.5rem; text-align: center; position: relative; }
+.step-num {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--border-2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 700; font-size: 1rem;
+  color: var(--teal); margin: 0 auto 1.5rem; position: relative; z-index: 1;
+}
+.step-title {
+  font-family: var(--display); font-size: 0.95rem; font-weight: 600;
+  color: var(--white); margin-bottom: 0.5rem;
+}
+.step-text { font-size: 0.82rem; color: var(--dim); line-height: 1.6; }
+
+/* CTA */
+#cta {
+  padding: 7rem var(--pad);
+  border-top: 1px solid var(--border);
+  text-align: center; position: relative; overflow: hidden;
+}
+#cta::before {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px; height: 250px;
+  background: radial-gradient(ellipse, rgba(0,229,195,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-title {
+  font-family: var(--display); font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 800; color: var(--white); letter-spacing: -0.03em;
+  line-height: 1.05; margin-bottom: 1.25rem; position: relative; z-index: 1;
+}
+.cta-title .accent { color: var(--teal); }
+.cta-sub {
+  font-size: 1rem; color: var(--dim); max-width: 440px;
+  margin: 0 auto 2.5rem; line-height: 1.7; position: relative; z-index: 1;
+}
+.cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 0;
+}
+.footer-main {
+  padding: 2.5rem var(--pad);
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 2rem; flex-wrap: wrap;
+}
+.footer-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.footer-links { display: flex; gap: 2rem; }
+.footer-links a {
+  font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--dim); text-decoration: none; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--white); }
+.footer-copy { font-size: 0.72rem; color: var(--dimmer); }
+
+/* GROUP BANNER */
+.footer-group-banner {
+  border-top: 1px solid var(--border);
+  background: var(--deep);
+  padding: 1.1rem var(--pad);
+  display: flex; align-items: center; justify-content: center; gap: 1rem;
+}
+.group-banner-text {
+  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--dimmer);
+}
+.group-banner-divider { width: 1px; height: 14px; background: var(--border-2); }
+.group-banner-link {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  text-decoration: none; transition: opacity 0.2s;
+}
+.group-banner-link:hover { opacity: 0.8; }
+.group-mark {
+  width: 20px; height: 20px; border-radius: 5px;
+  background: #2E7CF6;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 800; font-size: 0.6rem; color: #fff;
+}
+.group-name {
+  font-family: var(--display); font-size: 0.8rem; font-weight: 700;
+  color: var(--off-white); letter-spacing: 0.01em;
+}
+.group-name span { color: #5B9BFF; }
+
+/* ANIMS */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.fade { opacity: 0; animation: fadeUp 0.75s ease forwards; }
+.d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.15s; }
+.d3 { animation-delay: 0.25s; } .d4 { animation-delay: 0.38s; }
+
+@media (max-width: 860px) {
+  .features-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .steps::before { display: none; }
+  .nav-links { display: none; }
+  .footer-main { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── CONTACT FORM ── */
+.cta-form {
+  max-width: 560px;
+  margin: 2.5rem auto 0;
+  position: relative;
+  z-index: 1;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+.form-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+  font-weight: 400;
+  font-family: var(--body);
+}
+.form-input, .form-select {
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem;
+  font-family: var(--body);
+  font-weight: 300;
+  color: var(--off-white);
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+}
+.form-input::placeholder { color: var(--dimmer); }
+.form-input:focus, .form-select:focus {
+  border-color: var(--form-accent, #2E7CF6);
+  background: var(--surface);
+}
+.form-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237B8394' stroke-width='2'%3E%3Cpolyline points='6,9 12,15 18,9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+.form-select option { background: #1E2330; color: var(--off-white); }
+.form-submit {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-family: var(--body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.95rem 2rem;
+  border-radius: 8px;
+  margin-top: 0.25rem;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+.form-submit:hover { opacity: 0.88; }
+.form-success {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 8px;
+  background: rgba(0,229,195,0.08);
+  color: #00E5C3;
+  border: 1px solid rgba(0,229,195,0.2);
+}
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">GoAI<span> Partners</span></a>
+  <a class="nav-brand" href="#">
+    <div class="nav-mark">G</div>
+    <div class="nav-name">GoAI <span>Partners</span></div>
+  </a>
   <ul class="nav-links">
-    <li><a href="#how">How it works</a></li>
-    <li><a href="#platform">Platform</a></li>
-    <li><a href="#cases">Case studies</a></li>
-    <li><a href="#insights">Insights</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#cta">Get Started</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Let's talk &rarr;</a>
+  <a class="nav-cta" href="#cta">Get Started</a>
 </nav>
 
-<section id="hero" style="max-width: none; padding-left: 48px; padding-right: 48px; position: relative;">
-  <div class="hero-grid"></div>
+<section id="hero">
   <div class="hero-glow"></div>
-  <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
-    <div class="hero-tag">Enterprise AI Automation - Washington, DC</div>
-    <h1>Your business runs <em>smarter</em><br/>from next week.</h1>
-    <p class="hero-sub">GoAI Partners builds and maintains intelligent automation agents tailored to exactly how your organization operates - from first workflow to full SaaS deployment.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Start a conversation</a>
-      <a href="#how" class="btn-ghost">See how it works</a>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-badge fade d1">
+      <span class="badge-dot"></span>
+      AI Workflow Automation · US, Canada, UK
     </div>
-    <div class="hero-stats">
-      <div><div class="stat-num">45+</div><div class="stat-label">Pre-built agents ready to deploy</div></div>
-      <div><div class="stat-num">11</div><div class="stat-label">Business areas covered</div></div>
-      <div><div class="stat-num">Weeks</div><div class="stat-label">To measurable real results</div></div>
-      <div><div class="stat-num">100%</div><div class="stat-label">Adapted to your stack</div></div>
+    <h1 class="hero-title fade d2">
+      Stop doing it manually.<br />
+      <span class="accent">Start next week.</span>
+    </h1>
+    <p class="hero-sub fade d3">
+      GoAI Partners builds custom automation for any business, any industry, and any budget. We identify what is costing your team the most time, build the system, and do everything for you. You keep what already works.
+    </p>
+    <div class="hero-actions fade d4">
+      <a class="btn-primary" href="#cta">Request a Demo</a>
+      <a class="btn-outline" href="#features">See Features</a>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="features-header">
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Platform Features</span>
+    </div>
+    <h2 class="section-heading">Built around how your<br /><em>business actually runs.</em></h2>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17.5 14v6M14.5 17h6"/></svg>
+      </div>
+      <div class="feature-name">Visual Workflow Builder</div>
+      <div class="feature-text">We map your workflows and build the automation that replaces manual steps. No engineering team needed on your end. We handle it.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div class="feature-name">AI-Powered Triggers</div>
+      <div class="feature-text">Intelligent automation that knows when to act based on behavior, time, data, or custom conditions you define.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+      </div>
+      <div class="feature-name">Cross-Tool Integrations</div>
+      <div class="feature-text">Works with the tools you already have. CRM, email, calendar, billing, and more. You do not start over. We fit into what already works.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <div class="feature-name">Performance Analytics</div>
+      <div class="feature-text">See exactly what changed. Time saved, tasks automated, and business impact tracked from the day your system goes live.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="feature-name">Team Permissions</div>
+      <div class="feature-text">Role-based access so every team member sees exactly what they need and nothing they do not.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <div class="feature-name">Automation Templates</div>
+      <div class="feature-text">Pre-built automation for the most common business operations. Running in days, customized to how your business works.</div>
     </div>
   </div>
 </section>
 
 <section id="how">
-  <div class="label">How it works</div>
-  <h2>Not tools. <em>Delivered solutions.</em></h2>
-  <p class="section-sub">The difference between "having AI" and "AI that works inside your business" is who takes responsibility for adapting, integrating, and maintaining it.</p>
+  <div class="eyebrow">
+    <div class="eyebrow-line"></div>
+    <span class="eyebrow-text">How It Works</span>
+  </div>
+  <h2 class="section-heading" style="margin-top: 1.25rem; margin-bottom: 0;">From manual to<br /><em>done for you.</em></h2>
   <div class="steps">
     <div class="step">
-      <div class="step-accent-line"></div>
-      <div class="step-num">01 - Discovery</div>
-      <h3>We map your real workflows and systems</h3>
-      <p>We understand how your business works today - not how it should work in theory. We identify what to automate, what to integrate, and where to start for maximum impact.</p>
+      <div class="step-num">01</div>
+      <div class="step-title">Audit</div>
+      <div class="step-text">We learn how your business works and identify the processes costing you the most time and money.</div>
     </div>
     <div class="step">
-      <div class="step-accent-line"></div>
-      <div class="step-num">02 - Build</div>
-      <h3>Personalize, integrate, and develop</h3>
-      <p>Starting from a proven agent library, we adapt each solution to your exact workflows - your ERP, CRM, internal tools, or custom systems. If it doesn't exist yet, we build it.</p>
+      <div class="step-num">02</div>
+      <div class="step-title">Build</div>
+      <div class="step-text">Your automations are configured in the GoAI Partners platform connected to your existing tools.</div>
     </div>
     <div class="step">
-      <div class="step-accent-line"></div>
-      <div class="step-num">03 - Run</div>
-      <h3>We deliver and maintain the solution</h3>
-      <p>Choose managed SaaS on our platform or on-premise deployment in your infrastructure. Full maintenance is on us. The result - and the value - belongs entirely to you.</p>
+      <div class="step-num">03</div>
+      <div class="step-title">Deploy</div>
+      <div class="step-text">Live in days. Your team is supported through the whole process. Most businesses are running smarter within a week.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-title">Measure</div>
+      <div class="step-text">Track real outcomes time saved, errors reduced, and revenue impact from your analytics dashboard.</div>
     </div>
   </div>
 </section>
 
-<div id="why" style="background: var(--bg2);">
-<section style="background: transparent;">
-  <div class="label">Why GoAI Partners</div>
-  <div id="why-inner">
-    <div>
-      <h2>The complete<br/>ecosystem, <em>not just<br/>the agent.</em></h2>
-      <p class="section-sub" style="margin-bottom: 32px;">We own the full stack - from discovery to deployment to ongoing improvement. No hand-offs, no gaps, no finger-pointing.</p>
-      <div class="feature-list">
-        <div class="feature">
-          <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <div class="feature-text">
-            <h4>Agents 100% customizable to your workflows</h4>
-            <p>You don't adapt to the agent - the agent adapts to you. Every automation is built around your actual processes, data, and way of operating.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
-          <div class="feature-text">
-            <h4>Integration with systems you already use</h4>
-            <p>We connect agents to your ERP, CRM, databases, proprietary APIs, or any external system. AI works inside your stack, not alongside it.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <div class="feature-text">
-            <h4>From custom solution to scalable SaaS</h4>
-            <p>We start by solving your specific problem - then evolve that solution into a repeatable, scalable SaaS product as your needs grow.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="feature-text">
-            <h4>Real support, not a chatbot</h4>
-            <p>Dedicated account support from the team that built your solution - people who understand your deployment and can act on issues fast.</p>
-          </div>
-        </div>
-      </div>
+<section id="cta">
+  <h2 class="cta-title">Tell us what is<br /><span class="accent">slowing you down.</span></h2>
+  <p class="cta-sub">Tell us where the manual work is piling up. We will build the system that handles it. Any industry. Any size. Done for you.</p>
+  <form class="cta-form" action="https://formspree.io/f/mykopnbb" method="POST" style="--form-accent: #00E5C3;">
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label">First Name</label>
+      <input class="form-input" type="text" name="first_name" placeholder="Alex" required />
     </div>
-    <div class="why-aside">
-      <div class="aside-card">
-        <div class="big-num">97%</div>
-        <div class="big-label">Client retention after year one</div>
-        <div class="metric-row"><span class="metric-label">Deployment</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:90%"></div></div><span class="metric-val">~2wk</span></div>
-        <div class="metric-row"><span class="metric-label">Time saved</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:75%"></div></div><span class="metric-val">75%</span></div>
-        <div class="metric-row"><span class="metric-label">Error reduction</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:88%"></div></div><span class="metric-val">88%</span></div>
-        <div class="metric-row"><span class="metric-label">ROI avg</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:95%"></div></div><span class="metric-val">4.2x</span></div>
-      </div>
-      <div style="margin-top:16px;background:var(--surface);border:1px solid var(--border2);border-radius:6px;padding:28px;">
-        <div style="font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:0.1em;margin-bottom:14px;">COVERAGE</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;">
-          <div style="background:var(--bg2);padding:14px;"><div class="agent-area">Admin</div><div style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--text);">7</div></div>
-          <div style="background:var(--bg2);padding:14px;"><div class="agent-area">Sales</div><div style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--text);">4</div></div>
-          <div style="background:var(--bg2);padding:14px;"><div class="agent-area">Operations</div><div style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--text);">4</div></div>
-          <div style="background:var(--bg2);padding:14px;"><div class="agent-area">HR</div><div style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--text);">4</div></div>
-          <div style="background:var(--bg2);padding:14px;"><div class="agent-area">Legal</div><div style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--text);">5</div></div>
-          <div style="background:var(--bg2);padding:14px;"><div class="agent-area">+ more</div><div style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--accent);">21</div></div>
-        </div>
-      </div>
+    <div class="form-group">
+      <label class="form-label">Last Name</label>
+      <input class="form-input" type="text" name="last_name" placeholder="Rivera" required />
     </div>
   </div>
+  <div class="form-group">
+    <label class="form-label">Work Email</label>
+    <input class="form-input" type="email" name="email" placeholder="alex@company.com" required />
+  </div>
+  <div class="form-group">
+    <label class="form-label">Company</label>
+    <input class="form-input" type="text" name="company" placeholder="Acme Corp" />
+  </div>
+  <div class="form-group">
+    <label class="form-label">Which area do you want to start with?</label>
+    <select class="form-select" name="area" required>
+      <option value="" disabled selected>Select what fits best</option>
+          <option value="My team does the same things manually every day">My team does the same things manually every day</option>
+          <option value="I am drowning in emails and follow-ups">I am drowning in emails and follow-ups</option>
+          <option value="My processes break when someone is out">My processes break when someone is out</option>
+          <option value="I want to grow without adding headcount">I want to grow without adding headcount</option>
+          <option value="I have no visibility into what my team is doing">I have no visibility into what my team is doing</option>
+          <option value="I am not sure where to start, I just need help">I am not sure where to start, I just need help</option>
+    </select>
+  </div>
+  <button class="form-submit" type="submit" style="background:#00E5C3; color:#000;">Get My Free Game Plan</button>
+  <div class="form-success">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+    Got it. We will be in touch shortly with your free game plan.
+  </div>
+</form>
 </section>
-</div>
-
-<div id="platform" style="background: var(--bg);">
-<section style="background: transparent;">
-  <div class="label">Our platform</div>
-  <h2>Built to solve. <em>Designed to scale.</em></h2>
-  <p class="section-sub">GoAI Partners starts with a deep library of proven automation capabilities - then customizes, connects, and evolves them into the solution your business actually needs.</p>
-  <div class="capabilities-grid">
-    <div class="cap-card">
-      <div class="cap-tag">Automation</div>
-      <div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-      <h4>Intelligent process agents</h4>
-      <p>45+ pre-built agents covering finance, HR, operations, legal, customer service, and more - each fully adaptable to your exact workflows.</p>
-    </div>
-    <div class="cap-card">
-      <div class="cap-tag">Integration</div>
-      <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
-      <h4>Deep system connectivity</h4>
-      <p>Native connections to ERPs, CRMs, databases, WhatsApp, email, and custom APIs. Your agents live inside your stack - not on the side of it.</p>
-    </div>
-    <div class="cap-card">
-      <div class="cap-tag">Intelligence</div>
-      <div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
-      <h4>Corporate knowledge assistant</h4>
-      <p>An agent trained on your internal documentation, processes, and data. Your team asks questions - it answers with precision, every time.</p>
-    </div>
-    <div class="cap-card">
-      <div class="cap-tag">Governance</div>
-      <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <h4>User, role and permissions management</h4>
-      <p>Granular control over who accesses what - scalable from small teams to large organizations on the same platform.</p>
-    </div>
-    <div class="cap-card">
-      <div class="cap-tag">Analytics</div>
-      <div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-      <h4>Metrics and feedback dashboard</h4>
-      <p>Real-time visibility into agent performance, usage, and outcomes - so you can continuously improve what's working and catch what isn't.</p>
-    </div>
-    <div class="cap-card">
-      <div class="cap-tag">Deployment</div>
-      <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <h4>SaaS or on-premise - you choose</h4>
-      <p>Managed on our secure infrastructure, or delivered to yours. Either way, full maintenance, monitoring, and support is included.</p>
-    </div>
-  </div>
-</section>
-</div>
-
-<section id="cases" style="background: var(--bg2);">
-  <div class="label">Client reviews</div>
-  <h2>What our <em>clients say.</em></h2>
-  <p class="section-sub">Independent reviews from real clients, verified by a leading third-party B2B ratings platform.</p>
-
-  <div style="display:flex;align-items:center;gap:32px;margin-bottom:48px;padding:28px 32px;background:var(--surface);border:1px solid var(--border2);border-radius:6px;flex-wrap:wrap;">
-    <div>
-      <div style="font-family:var(--mono);font-size:48px;font-weight:700;color:var(--accent);line-height:1;">4.9</div>
-      <div style="display:flex;gap:4px;margin:8px 0 4px;">
-        <span style="color:var(--accent);font-size:18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      </div>
-      <div style="font-size:14px;color:var(--text3);font-family:var(--mono);">36 independently verified reviews</div>
-    </div>
-    <div style="width:1px;height:64px;background:var(--border2);flex-shrink:0;"></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;">
-      <div>
-        <div style="font-size:13px;color:var(--text3);margin-bottom:4px;">Quality</div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="flex:1;height:3px;background:var(--border2);border-radius:2px;"><div style="width:98%;height:100%;background:var(--accent);border-radius:2px;"></div></div>
-          <span style="font-family:var(--mono);font-size:13px;color:var(--text2);">4.9</span>
-        </div>
-      </div>
-      <div>
-        <div style="font-size:13px;color:var(--text3);margin-bottom:4px;">Schedule</div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="flex:1;height:3px;background:var(--border2);border-radius:2px;"><div style="width:98%;height:100%;background:var(--accent);border-radius:2px;"></div></div>
-          <span style="font-family:var(--mono);font-size:13px;color:var(--text2);">4.9</span>
-        </div>
-      </div>
-      <div>
-        <div style="font-size:13px;color:var(--text3);margin-bottom:4px;">Cost</div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="flex:1;height:3px;background:var(--border2);border-radius:2px;"><div style="width:96%;height:100%;background:var(--accent);border-radius:2px;"></div></div>
-          <span style="font-family:var(--mono);font-size:13px;color:var(--text2);">4.8</span>
-        </div>
-      </div>
-      <div>
-        <div style="font-size:13px;color:var(--text3);margin-bottom:4px;">Willing to refer</div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="flex:1;height:3px;background:var(--border2);border-radius:2px;"><div style="width:98%;height:100%;background:var(--accent);border-radius:2px;"></div></div>
-          <span style="font-family:var(--mono);font-size:13px;color:var(--text2);">4.9</span>
-        </div>
-      </div>
-    </div>
-    <div style="margin-left:auto;max-width:180px;">
-      <div style="font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;">Independently verified by</div>
-      <div style="font-size:14px;color:var(--text2);font-weight:500;">Third-party B2B ratings platform</div>
-    </div>
-  </div>
-
-  <div class="cases-grid">
-    <div class="case-card">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;">
-        <div class="case-industry">Sports Tech / Mobile App</div>
-        <span style="color:var(--accent);font-size:15px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      </div>
-      <p class="case-desc" style="margin-bottom:20px;">MVP development and design for a sports tech startup - built an app, configured servers and database, delivered on time and within budget.</p>
-      <p class="case-quote">"We were impressed with their ability to adapt to our startup reality in terms of cost and delivery time."</p>
-      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
-        <div style="font-size:13px;color:var(--text3);">Executive, Ultras &middot; Spain</div>
-        <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">Jan 2026</div>
-      </div>
-    </div>
-    <div class="case-card">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;">
-        <div class="case-industry">Agriculture / AI Platform</div>
-        <span style="color:var(--accent);font-size:15px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      </div>
-      <p class="case-desc" style="margin-bottom:20px;">Built an AI-powered web platform for feed prescription management at a major agricultural enterprise using React, Python, and AWS ML models.</p>
-      <p class="case-quote">"The knowledge and experience in AI is one of the aspects that most impresses me."</p>
-      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
-        <div style="font-size:13px;color:var(--text3);">Julian Soriano, Cargill &middot; Argentina</div>
-        <div style="font-family:var(--mono);font-size:11px;color:var(--text3);">May 2025</div>
-      </div>
-    </div>
-    <div class="case-card">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;">
-        <div class="case-industry">Top mentions</div>
-        <span style="font-family:var(--mono);font-size:11px;color:var(--text3);">36 reviews</span>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg2);border-radius:4px;">
-          <span style="font-size:14px;color:var(--text2);">Timely delivery</span>
-          <span style="font-family:var(--mono);font-size:12px;color:var(--accent);">20 mentions</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg2);border-radius:4px;">
-          <span style="font-size:14px;color:var(--text2);">Professional</span>
-          <span style="font-family:var(--mono);font-size:12px;color:var(--accent);">11 mentions</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg2);border-radius:4px;">
-          <span style="font-size:14px;color:var(--text2);">Communicative</span>
-          <span style="font-family:var(--mono);font-size:12px;color:var(--accent);">9 mentions</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg2);border-radius:4px;">
-          <span style="font-size:14px;color:var(--text2);">High-quality work</span>
-          <span style="font-family:var(--mono);font-size:12px;color:var(--accent);">9 mentions</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg2);border-radius:4px;">
-          <span style="font-size:14px;color:var(--text2);">Proactive</span>
-          <span style="font-family:var(--mono);font-size:12px;color:var(--accent);">6 mentions</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="insights" style="background: var(--bg);">
-  <div class="label">Customer insights</div>
-  <h2>What leaders are <em>actually seeing.</em></h2>
-  <p class="section-sub">Patterns and findings from GoAI deployments across industries and company sizes.</p>
-  <div class="insights-grid">
-    <div class="insight-card">
-      <div class="insight-tag">Insight - Strategy</div>
-      <div class="insight-title">78% of executives say agentic AI requires reinventing their operating model</div>
-      <p class="insight-body">Solo agents are giving way to coordinated multi-agent systems. Organizations that treat agentic AI as a drop-in tool rather than a structural shift are seeing limited ROI - those rebuilding workflows around it are seeing transformational results.</p>
-      <div class="insight-date">April 2026 - UiPath Agentic Automation Trends Report</div>
-    </div>
-    <div class="insight-card">
-      <div class="insight-tag">Insight - Operations</div>
-      <div class="insight-title">Business users are now the second-fastest growing automation group</div>
-      <p class="insight-body">In 2025, HR, finance, and sales teams became active builders of automation workflows - not just consumers. 63% of organizations now report over 200 self-service automation users, signaling automation has left the IT department for good.</p>
-      <div class="insight-date">March 2026 - Stonebranch Global State of IT Automation</div>
-    </div>
-    <div class="insight-card">
-      <div class="insight-tag">Insight - Technology</div>
-      <div class="insight-title">The IPA market hit $18B in 2025 - and is still accelerating</div>
-      <p class="insight-body">Intelligent Process Automation expanded from $16B in 2024 to $18B in 2025 at a 12.9% CAGR. The shift driving it is decision-making capability - automation is no longer just task execution, it's contextual judgment at scale.</p>
-      <div class="insight-date">February 2026 - Industry Market Analysis</div>
-    </div>
-    <div class="insight-card">
-      <div class="insight-tag">Insight - Leadership</div>
-      <div class="insight-title">Adoption is a design problem, not a training problem</div>
-      <p class="insight-body">Organizations that struggle with AI adoption almost always have an integration gap, not a skills gap. When agents connect to the tools teams already live in, usage is immediate and sustained - without any formal training required.</p>
-      <div class="insight-date">January 2026 - GoAI Deployment Analysis</div>
-    </div>
-    <div class="insight-card">
-      <div class="insight-tag">Insight - Governance</div>
-      <div class="insight-title">Governance-as-code is becoming the new baseline for enterprise AI</div>
-      <p class="insight-body">As AI agents take on more autonomous decision-making, organizations in regulated industries are requiring platforms to show how decisions are made, how models are trained, and how data flows. Transparency is no longer optional - it is the purchase criteria.</p>
-      <div class="insight-date">December 2025 - Enterprise AI Governance Review</div>
-    </div>
-    <div class="insight-card">
-      <div class="insight-tag">Insight - Infrastructure</div>
-      <div class="insight-title">77% of enterprises now run hybrid environments - and cloud-only is declining</div>
-      <p class="insight-body">The cloud-or-on-premise debate is settled: most enterprises need both. Organizations are shifting focus from migration to optimization - fine-tuning how workloads are distributed across environments to balance performance, cost, and compliance.</p>
-      <div class="insight-date">November 2025 - Stonebranch Global State of IT Automation</div>
-    </div>
-  </div>
-</section>
-
-<div id="contact" style="background: var(--bg2);">
-<section style="background: transparent;">
-  <div class="label">Let's talk</div>
-  <div class="contact-inner">
-    <div class="contact-info">
-      <h3>Where do we<br/>start for you?</h3>
-      <p>Tell us which area of your business you want to improve. In one short call we'll tell you if we can help and exactly how - no long forms, no generic proposals.</p>
-      <div class="contact-details">
-        <div class="contact-detail">
-          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div class="contact-detail-text"><strong>Email us</strong>hello@goaipartners.com</div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div class="contact-detail-text"><strong>Based in</strong>Washington, DC - serving clients globally</div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="contact-detail-text"><strong>Response time</strong>Within 24 business hours</div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="contact-form">
-        <div class="form-row">
-          <div><label for="fname">First name</label><input type="text" id="fname" placeholder="Alex"/></div>
-          <div><label for="lname">Last name</label><input type="text" id="lname" placeholder="Rivera"/></div>
-        </div>
-        <div><label for="email">Work email</label><input type="email" id="email" placeholder="alex@company.com"/></div>
-        <div><label for="company">Company</label><input type="text" id="company" placeholder="Acme Corp"/></div>
-        <div>
-          <label for="area">Which area do you want to start with?</label>
-          <select id="area">
-            <option value="" disabled selected>Select a department</option>
-            <option>Finance &amp; Accounting</option>
-            <option>Customer Service</option>
-            <option>Sales &amp; Marketing</option>
-            <option>Procurement</option>
-            <option>Human Resources</option>
-            <option>Operations</option>
-            <option>Legal &amp; Compliance</option>
-            <option>Not sure - I want guidance</option>
-          </select>
-        </div>
-        <div><label for="message">Tell us more (optional)</label><textarea id="message" placeholder="What's the current challenge or process you'd like to automate?"></textarea></div>
-        <button class="btn-submit" onclick="handleSubmit()">Request a free consultation</button>
-        <p style="font-size:13px;color:var(--text3);text-align:center;font-family:var(--mono);">No commitment. Response within 24 business hours.</p>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
 
 <footer>
-  <div class="footer-logo">GoAI<span> Partners</span></div>
-  <div class="footer-links">
-    <a href="#how">How it works</a>
-    <a href="#platform">Platform</a>
-    <a href="#cases">Case studies</a>
-    <a href="#insights">Insights</a>
-    <a href="#contact">Contact</a>
+  <div class="footer-main">
+    <a class="footer-brand" href="#">
+      <div class="nav-mark">G</div>
+      <div class="nav-name">GoAI <span>Partners</span></div>
+    </a>
+    <div class="footer-links">
+      <a href="#features">Features</a>
+      <a href="#how">How It Works</a>
+      <a href="mailto:brenda.mana@goaigentic.com">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 GoAI Partners · US, Canada, UK · All rights reserved.</div>
   </div>
-  <div class="footer-copy">&copy; 2026 GoAI Partners - Washington, DC</div>
+
+  <div class="footer-group-banner">
+    <span class="group-banner-text">A proud member of</span>
+    <div class="group-banner-divider"></div>
+    <a class="group-banner-link" href="https://goaigroup.com" target="_blank" rel="noopener">
+      <div class="group-mark">G</div>
+      <div class="group-name">GoAI <span>Group</span> INC</div>
+    </a>
+  </div>
 </footer>
 
+
 <script>
-async function handleSubmit() {
-  const btn = document.querySelector('.btn-submit');
-  const data = {
-    firstName: document.getElementById('fname').value,
-    lastName: document.getElementById('lname').value,
-    email: document.getElementById('email').value,
-    company: document.getElementById('company').value,
-    area: document.getElementById('area').value,
-    message: document.getElementById('message').value
-  };
-  if (!data.email) { alert('Please enter your email address.'); return; }
-  btn.textContent = 'Sending...';
-  btn.style.opacity = '0.7';
-  btn.disabled = true;
-  try {
-    const res = await fetch('https://formspree.io/f/mwvykbkj', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data)
+(function() {
+  var forms = document.querySelectorAll('.cta-form');
+  forms.forEach(function(form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      var btn = form.querySelector('.form-submit');
+      var success = form.querySelector('.form-success');
+      var orig = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.style.opacity = '0.6';
+      btn.disabled = true;
+      try {
+        var res = await fetch('https://formspree.io/f/mykopnbb', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          success.style.display = 'flex';
+          btn.textContent = 'Sent!';
+        } else {
+          btn.textContent = orig;
+          btn.style.opacity = '1';
+          btn.disabled = false;
+        }
+      } catch(err) {
+        btn.textContent = orig;
+        btn.style.opacity = '1';
+        btn.disabled = false;
+      }
     });
-    if (res.ok) {
-      btn.textContent = "Sent! We'll be in touch shortly.";
-      btn.style.background = '#1D9E75';
-      btn.style.opacity = '1';
-    } else {
-      btn.textContent = 'Something went wrong - please try again.';
-      btn.style.background = '#A32D2D';
-      btn.style.opacity = '1';
-      btn.disabled = false;
-    }
-  } catch(e) {
-    btn.textContent = 'Network error - please try again.';
-    btn.style.background = '#A32D2D';
-    btn.style.opacity = '1';
-    btn.disabled = false;
-  }
-}
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const id = a.getAttribute('href').slice(1);
-    const el = document.getElementById(id);
-    if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
   });
-});
+})();
 </script>
 </body>
 </html>
